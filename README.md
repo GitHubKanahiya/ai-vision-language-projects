@@ -54,9 +54,14 @@ project-name/
    cd project-name
 Set up a virtual environment
 
+
+
+3.Set up a virtual environment
 python -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
+
+
 
 4.Start the model via Ollama
 ollama pull llava
