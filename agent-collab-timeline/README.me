@@ -1,0 +1,96 @@
+
+# 🧠 Project 14: Visual Timeline of Agent Collaboration
+
+A visualization tool that displays the chronological output of multi-agent collaboration (e.g., research, summarization, counterpoints, insights) over time. This project extends the AthenaCore system by adding a **timeline-based UI** for better tracking and analysis of agent contributions.
+
+---
+
+## 🎯 Goal
+
+- Visualize how each AI agent contributes to a topic.
+- Show agent outputs with timestamps in a clean, scrollable timeline.
+- Group content by agent and topic.
+- Enable export of visual timelines as PDF or PNG (optional).
+
+---
+
+## 🧩 Features
+
+- ⏱ **Timestamps** added to every agent log entry.
+- 🧠 **Grouped by Topic & Agent** for contextual clarity.
+- 🧾 **Timeline View** using visual cards.
+- 📤 **Exportable Timeline** (PDF/PNG) – *optional enhancement*.
+- 📁 **Persistent Memory** using TinyDB (`memory_store.json`).
+
+---
+
+---
+
+## 🚀 How to Use
+
+### 1. Install Dependencies
+
+```bash
+pip install streamlit tinydb matplotlib fpdf
+
+
+Optional (if using Whisper/LLM):
+pip install openai-whisper
+
+2. Run LLM Backend
+ollama run llama2
+
+3. Launch the Timeline UI
+streamlit run timeline_view.py
+
+
+🧠 How It Works
+Each agent logs its response with:
+
+Agent Name
+
+Output Content
+
+Timestamp
+
+Topic Context
+
+These logs are stored in memory/memory_store.json.
+
+The frontend (timeline_view.py) reads this memory, groups messages by topic and agent, and renders a visual timeline.
+
+Optionally, export the full timeline as PDF or PNG via export utilities.
+
+🧰 Optional: Export Timeline
+To enable PDF/PNG export, use utils/export_utils.py and integrate a download button in timeline_view.py using st.download_button.
+
+📎 Sample Use Cases
+Tracking long-term collaboration between research agents.
+
+Visualizing AI thought evolution on strategic topics (e.g., “AI and Global Regulation”).
+
+Archiving agent-generated insights for reporting.
+
+🔒 Requirements
+
+streamlit
+tinydb
+matplotlib
+fpdf
+👥 Credits
+Built as part of the AthenaCore system, extending capabilities for memory-rich, multi-agent strategic AI collaboration.
+
+
+
+---
+
+Let me know if you’d like a [PDF export button added](f), [timeline design preview](f), or [live Streamlit demo link](f).
+
+
+
+
+
+
+
+
+
