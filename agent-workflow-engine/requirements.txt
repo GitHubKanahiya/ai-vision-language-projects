@@ -1,0 +1,7 @@
+
+openai-whisper
+pyttsx3
+SpeechRecognition
+pyaudio
+sounddevice
+scipy
